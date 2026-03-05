@@ -39,4 +39,4 @@ class InteractionModel(SQLModel):
     learner_id: int
     item_id: int
     kind: str
-    timestamp: datetime
+    created_at: datetime = Field(default_factory=datetime.utcnow)
